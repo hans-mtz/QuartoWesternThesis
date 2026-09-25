@@ -1,0 +1,8 @@
+# Abstract {.unnumbered}
+
+<!-- Max 150 words (master's) or 350 words (doctoral). Same line spacing as the body. -->
+
+This thesis studies long-memory time series and their estimation. It states the
+research problem, the methods used, the main findings and their significance.
+
+**Keywords:** time series analysis, long memory, data mining

@@ -1,0 +1,7 @@
+# Summary for Lay Audience {.unnumbered}
+
+<!-- Required. Max 350 words, written for readers without prior knowledge of the field. -->
+
+Many measurements taken over time, such as river levels or stock prices, are
+influenced by what happened long ago. This thesis looks at ways to describe that
+long-lasting influence and to use it for better forecasts.

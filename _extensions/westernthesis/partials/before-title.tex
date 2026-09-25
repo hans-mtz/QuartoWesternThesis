@@ -1,0 +1,51 @@
+% ---------------------------------------------------------------------------
+% Western thesis preamble (SGPS "Procedure for Thesis Formats and Content")
+% ---------------------------------------------------------------------------
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+
+% Line spacing (§6.3): 1.5 to 2 for all text.
+\AtBeginDocument{\$line-spacing$spacing}
+
+% Bibliography may be single-spaced (§6.3).
+\AtBeginEnvironment{CSLReferences}{\singlespacing}
+
+% Page styles (§6.6)
+%   front matter: lowercase roman, centred at the bottom
+%   body:         arabic, upper right corner (chapter opening pages included)
+\fancypagestyle{westernfront}{%
+  \fancyhf{}%
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+\fancypagestyle{westernbody}{%
+  \fancyhf{}%
+$if(running-headers)$
+  \fancyhead[L]{\small\nouppercase{\leftmark}}%
+$endif$
+  \fancyhead[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+\fancypagestyle{westernbodyplain}{%
+  \fancyhf{}%
+  \fancyhead[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+}
+
+% Front matter: \chapter* pages use `plain`, so point `plain` at the front style.
+\newcommand{\westernfrontmatter}{%
+  \pagenumbering{roman}%
+  \fancypagestyle{plain}[westernfront]{}%
+  \pagestyle{westernfront}%
+}
+% Body: page 1 is the first page of Chapter 1 (inserted by westernthesis.lua).
+\newcommand{\westernmainmatter}{%
+  \clearpage
+  \pagenumbering{arabic}%
+  \fancypagestyle{plain}[westernbodyplain]{}%
+  \pagestyle{westernbody}%
+}

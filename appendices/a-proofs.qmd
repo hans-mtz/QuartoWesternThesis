@@ -1,0 +1,5 @@
+# Proofs of Theorems {#sec-app-proofs}
+
+$$
+e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1
+$$

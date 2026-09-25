@@ -1,0 +1,41 @@
+# =============================================================================
+# Western University thesis — main configuration
+# Fill in the "TO FILL IN" parts. Render with:  quarto render
+# =============================================================================
+
+project:
+  type: book
+  output-dir: _thesis
+
+# -----------------------------------------------------------------------------
+# TO FILL IN — thesis information
+# -----------------------------------------------------------------------------
+book:
+  title: "Computational Statistics: Time Series and Data Mining"
+  author: "Jane Doe"
+  output-file: thesis
+  chapters:
+    - index.qmd                              # Abstract and keywords
+    - frontmatter/lay-summary.qmd            # required, max 350 words
+    - frontmatter/co-authorship.qmd          # remove if not applicable
+    - frontmatter/genai.qmd                  # required: use / non-use of GenAI
+    - frontmatter/acknowledgements.qmd       # optional
+    - frontmatter/lists.qmd                  # TOC + lists, do not remove
+    - frontmatter/abbreviations.qmd          # remove if not applicable
+    - chapters/01-introduction.qmd           # ← page 1 starts here
+    - chapters/02-long-memory.qmd
+    - chapters/03-conclusion.qmd
+    - backmatter/references.qmd
+  appendices:
+    - appendices/a-proofs.qmd
+
+bibliography: references.bib
+
+# -----------------------------------------------------------------------------
+# Format options
+# -----------------------------------------------------------------------------
+format:
+  westernthesis-pdf:
+    line-spacing: onehalf      # onehalf | double
+    running-headers: true      # chapter title top left, page number top right
+    draft-title-page: false    # true only for committee drafts; SGPS adds its own

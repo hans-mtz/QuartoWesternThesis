@@ -16,3 +16,8 @@ quarto-cnam-thesis-main/
 
 # OS
 .DS_Store
+
+**/*.quarto_ipynb
+
+# keep-tex output at project root
+/*.tex

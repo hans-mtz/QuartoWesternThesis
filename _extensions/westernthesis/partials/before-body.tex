@@ -1,0 +1,15 @@
+% SGPS §4.2: Scholarship@Western generates the title page on upload, so none is
+% printed unless `draft-title-page: true` (for committee drafts).
+$if(draft-title-page)$
+\begin{titlepage}
+  \centering
+  \vspace*{\fill}
+  {\Large\bfseries $title$\par}
+  \vspace{2em}
+  {\large $for(authors)$$it.name.literal$$sep$ \and $endfor$\par}
+  \vspace{2em}
+  DRAFT --- not for submission\par
+  \vspace*{\fill}
+\end{titlepage}
+$endif$
+\westernfrontmatter

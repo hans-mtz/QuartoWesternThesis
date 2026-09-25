@@ -1,0 +1,8 @@
+# Introduction {#sec-intro}
+
+This chapter introduces the objectives of the work. Chapter @sec-long-memory studies
+long-memory time series, and Chapter @sec-conclusion concludes.
+
+## Objectives
+
+State the objectives of the thesis here.
