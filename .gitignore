@@ -1,0 +1,18 @@
+# Reference material (kept locally, not distributed)
+WesternThesisLatex/
+quarto-cnam-thesis-main/
+
+# Quarto / LaTeX build output
+/.quarto/
+/_book/
+/_thesis/
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.tex.bak
+
+# OS
+.DS_Store
