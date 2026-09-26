@@ -30,6 +30,16 @@ contributes:
         - headsep=0.2in
         - footskip=0.4in
       number-sections: true
+      # Plates (photographs etc.) as their own numbered float with a List of Plates,
+      # as in the SGPS Word template: ![...](img.jpg){#plt-name}
+      crossref:
+        custom:
+          - kind: float
+            key: plt
+            reference-prefix: Plate
+            latex-env: plate
+            latex-list-of-file-extension: lopl
+            latex-list-of-description: Plate
       # The TOC and lists are placed by the {{< western-lists >}} shortcode, after the
       # abstract, lay summary and acknowledgements (SGPS §1.4 order).
       toc-depth: 3

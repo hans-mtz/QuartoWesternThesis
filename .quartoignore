@@ -1,0 +1,5 @@
+# Files not copied by `quarto use template hans-mtz/QuartoWesternThesis`
+README.md
+CLAUDE.md
+LICENSE
+.github/

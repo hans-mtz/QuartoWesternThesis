@@ -1,15 +1,28 @@
 # Curriculum Vitae {.unnumbered}
 
-<!-- Public information only (§4.11): no address, email, phone or signature. -->
+<!-- Always the last page(s) of the thesis (§4.11). Public information only: name,
+     post-secondary education and degrees, awards, related work experience and
+     relevant publications. No address, email, phone number or signature. -->
 
-|                          |                                             |
-|:-------------------------|:--------------------------------------------|
-| **Name:**                | Jane Doe                                    |
-| **Post-secondary Education and Degrees:** | Example University, City, Province, Canada<br>2016–2020 B.Sc. |
-|                          | The University of Western Ontario, London, Ontario, Canada<br>2020–2026 Ph.D. |
-| **Honours and Awards:**  | Example Graduate Scholarship, 2021–2024     |
-| **Related Work Experience:** | Teaching Assistant, The University of Western Ontario, 2020–2025 |
++-----------------------------+----------------------------------------------------+
+| **Name:**                   | Jane Doe                                           |
++-----------------------------+----------------------------------------------------+
+| **Post-secondary            | Example University\                                |
+| Education and Degrees:**    | City, Province, Canada\                            |
+|                             | 2016--2020 B.Sc.                                   |
+|                             |                                                    |
+|                             | The University of Western Ontario\                 |
+|                             | London, Ontario, Canada\                           |
+|                             | 2020--2026 Ph.D.                                   |
++-----------------------------+----------------------------------------------------+
+| **Honours and Awards:**     | Example Graduate Scholarship\                      |
+|                             | 2021--2024                                         |
++-----------------------------+----------------------------------------------------+
+| **Related Work              | Teaching Assistant\                                |
+| Experience:**               | The University of Western Ontario\                 |
+|                             | 2020--2025                                         |
++-----------------------------+----------------------------------------------------+
 
 **Publications:**
 
-Doe, J. (2026). An example article. *Journal of Examples*, 1(1), 1–10.
+Doe, J. (2026). An example article. *Journal of Examples*, 1(1), 1--10.

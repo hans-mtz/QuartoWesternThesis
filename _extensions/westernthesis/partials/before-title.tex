@@ -65,6 +65,16 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \setlength{\cftbeforechapskip}{6pt}
 
+% List of Plates (SGPS Word template), for the custom `plt` float.
+$if(has-plates)$
+\newcommand{\westernlistofplates}{%
+  \clearpage\phantomsection
+  \addcontentsline{toc}{chapter}{List of Plates}%
+  \listof{plate}{List of Plates}}
+$else$
+\newcommand{\westernlistofplates}{}
+$endif$
+
 % List of Appendices (§1.4), filled by westernthesis.lua; printed by
 % {{< western-lists >}} only when the thesis has lettered appendices.
 \newlistof{appendixlist}{loa}{List of Appendices}

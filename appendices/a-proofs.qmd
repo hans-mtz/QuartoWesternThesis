@@ -1,5 +1,13 @@
 # Proofs of Theorems {#sec-app-proofs}
 
+<!-- Each numbered file in `book.appendices` becomes a lettered appendix and appears
+     in the List of Appendices. -->
+
+::: {.proof}
+## Proof of @thm-euler
+
+By Euler's formula,
 $$
-e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1
+e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1.
 $$
+:::

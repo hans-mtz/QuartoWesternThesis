@@ -33,8 +33,9 @@ return {
     if flag(kwargs, "figures") then
       tex = tex .. listed("\\listoffigures", "\\listfigurename")
     end
-    -- Empty unless the thesis has lettered appendices (see before-title.tex).
-    tex = tex .. "\\westernlistofappendices\n"
+    -- Each empty unless the thesis has plates / lettered appendices
+    -- (see before-title.tex).
+    tex = tex .. "\\westernlistofplates\n\\westernlistofappendices\n"
     return pandoc.RawBlock("latex", tex)
   end
 }

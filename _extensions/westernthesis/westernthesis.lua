@@ -93,6 +93,10 @@ local function chapter_bibliography(h, body, n, meta)
   })
 end
 
+-- Set by the first filter pass: Quarto hands `#plt-` floats to filters as
+-- FloatRefTarget custom nodes, which a plain doc:walk does not visit.
+local found_plates = false
+
 local function is_chapter(b)
   return b.t == "Header" and b.level == 1
 end
@@ -179,7 +183,7 @@ local function set_copyright_year(meta)
   meta["copyright-year"] = date:match("(%d%d%d%d)") or os.date("%Y")
 end
 
-function Pandoc(doc)
+local function western_pandoc(doc)
   if not quarto.doc.is_format("latex") then
     return nil
   end
@@ -257,9 +261,19 @@ function Pandoc(doc)
     end
   end
 
-  -- Read by the preamble: \\westernlistofappendices prints only when true.
+  -- Read by the preamble: the List of Appendices / Plates print only when true.
   meta["has-appendices"] = has_appendices
+  meta["has-plates"] = found_plates
 
   doc.blocks = out
   return doc
 end
+
+return {
+  {
+    FloatRefTarget = function(el)
+      if el.identifier and el.identifier:match("^plt%-") then found_plates = true end
+    end,
+  },
+  { Pandoc = western_pandoc },
+}

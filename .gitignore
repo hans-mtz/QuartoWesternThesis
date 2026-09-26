@@ -15,6 +15,7 @@ thesis_procedures_format.pdf
 *.lof
 *.lot
 *.loa
+*.lopl
 *.out
 *.tex.bak
 
