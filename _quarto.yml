@@ -12,14 +12,19 @@ project:
 # -----------------------------------------------------------------------------
 book:
   title: "Computational Statistics: Time Series and Data Mining"
-  author: "Jane Doe"
+  author:
+    - name:
+        given: Jane
+        family: Doe
+  date: 2026-09-01
+  date-format: "MMMM YYYY"            # title page shows "September 2026"
   output-file: thesis
   chapters:
     - index.qmd                              # Abstract and keywords
     - frontmatter/lay-summary.qmd            # required, max 350 words
     - frontmatter/co-authorship.qmd          # remove if not applicable
-    - frontmatter/genai.qmd                  # required: use / non-use of GenAI
     - frontmatter/acknowledgements.qmd       # optional
+    - frontmatter/genai.qmd                  # required: use / non-use of GenAI
     - frontmatter/lists.qmd                  # TOC + lists, do not remove
     - frontmatter/abbreviations.qmd          # remove if not applicable
     - chapters/01-introduction.qmd           # ← page 1 starts here
@@ -28,8 +33,19 @@ book:
     - backmatter/references.qmd
   appendices:
     - appendices/a-proofs.qmd
+    - backmatter/cv.qmd                      # Curriculum Vitae, always last
 
 bibliography: references.bib
+
+# Title page (SGPS Word template) and abstract
+supervisor: "Dr. A. Supervisor"            # a list for several supervisors
+program: "Statistics and Actuarial Science"
+degree: "Doctor of Philosophy"
+degree-level: doctoral                     # doctoral | masters (abstract limit 350 | 150 words)
+keywords:
+  - time series analysis
+  - long memory
+  - data mining
 
 # -----------------------------------------------------------------------------
 # Format options
@@ -38,4 +54,7 @@ format:
   westernthesis-pdf:
     line-spacing: onehalf      # onehalf | double
     running-headers: true      # chapter title top left, page number top right
-    draft-title-page: false    # true only for committee drafts; SGPS adds its own
+    title-page: true           # SGPS Word template title page (page i, unnumbered)
+    # Integrated-article theses: a reference list at the end of each chapter.
+    # When true, you can remove backmatter/references.qmd from the chapters list.
+    chapter-bibliographies: false

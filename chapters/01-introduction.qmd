@@ -1,7 +1,7 @@
 # Introduction {#sec-intro}
 
-This chapter introduces the objectives of the work. Chapter @sec-long-memory studies
-long-memory time series, and Chapter @sec-conclusion concludes.
+This chapter introduces the objectives of the work. @sec-long-memory studies
+long-memory time series, and @sec-conclusion concludes.
 
 ## Objectives
 

@@ -5,4 +5,3 @@
 This thesis studies long-memory time series and their estimation. It states the
 research problem, the methods used, the main findings and their significance.
 
-**Keywords:** time series analysis, long memory, data mining

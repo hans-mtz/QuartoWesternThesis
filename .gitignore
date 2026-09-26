@@ -1,6 +1,9 @@
 # Reference material (kept locally, not distributed)
 WesternThesisLatex/
 quarto-cnam-thesis-main/
+etd_template2026.docx
+thesis_procedures_format.pdf
+~$*
 
 # Quarto / LaTeX build output
 /.quarto/
@@ -11,6 +14,7 @@ quarto-cnam-thesis-main/
 *.toc
 *.lof
 *.lot
+*.loa
 *.out
 *.tex.bak
 
@@ -21,3 +25,5 @@ quarto-cnam-thesis-main/
 
 # keep-tex output at project root
 /*.tex
+
+/.luarc.json

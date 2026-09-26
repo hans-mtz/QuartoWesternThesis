@@ -1,4 +1,4 @@
-# Time Series: Long Memory {#sec-long-memory}
+# Time Series: Long Memory {#sec-long-memory submitted="@mrx05"}
 
 Here is a picture of a long-memory time series (@fig-ts).
 
