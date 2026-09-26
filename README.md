@@ -92,6 +92,21 @@ pages are ready in `frontmatter/`: uncomment them in `_quarto.yml` to use them.
 **Figures, tables, equations and theorems** use standard Quarto cross-references
 (`@fig-`, `@tbl-`, `@eq-`, `@thm-`, `@sec-`). See `chapters/02-did.qmd`.
 
+**Assumptions** use the `asm-` prefix, like Quarto's theorem types. They are numbered
+by chapter (Assumption 2.1) and typeset upright, since they are not proved:
+
+```markdown
+::: {#asm-parallel}
+## Parallel trends
+
+Absent the policy, both groups would have followed the same trend.
+:::
+
+Under @asm-parallel, ...     <!-- "Under Assumption 2.1, ..." -->
+```
+
+`[@asm-a; @asm-b]` gives "Assumptions 2.1 and 2.2", and `-@asm-a` gives the number only.
+
 **Plates** (photographs and similar) have their own numbering and list:
 
 ```markdown

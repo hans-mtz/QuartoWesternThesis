@@ -47,18 +47,31 @@ y_{it} = \alpha + \beta\,\text{Treat}_i + \gamma\,\text{Post}_t
   + \delta\,(\text{Treat}_i \times \text{Post}_t) + \varepsilon_{it}.
 $$ {#eq-twfe}
 
-Unnumbered display math has no label. The key assumption is parallel trends:
+Unnumbered display math has no label:
 
+$$
+\hat\delta \xrightarrow{p} \delta \quad \text{as } n \to \infty.
+$$
+
+## Assumptions, Theorems and Proofs
+
+Assumptions use the `asm-` prefix. They are numbered by chapter and typeset upright,
+since they are not proved.
+
+::: {#asm-parallel}
+## Parallel trends
+
+Absent the wage increase, expected enlistment at Castle Black and Eastwatch would have
+changed by the same amount:
 $$
 E\left[y_{1}(0) - y_{0}(0) \mid T\right] = E\left[y_{1}(0) - y_{0}(0) \mid C\right].
 $$
-
-## Theorems and Proofs
+:::
 
 ::: {#prp-did}
 ## Identification
 
-Under parallel trends, the difference-in-differences estimand equals the average
+Under @asm-parallel, the difference-in-differences estimand equals the average
 treatment effect on the treated.
 :::
 

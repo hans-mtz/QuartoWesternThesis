@@ -8,6 +8,10 @@
 --    and other unnumbered back matter are left out.
 --  * Publication footnote on chapters with a `published`, `accepted` or `submitted`
 --    attribute (§3): "A version of this chapter has been published ...".
+--  * Assumptions: `::: {#asm-name}` divs become numbered `assumption` environments
+--    (Assumption 2.1) and `@asm-name` references become "Assumption 2.1". Quarto has
+--    no way to add theorem types, so this is done here, before Quarto's crossref and
+--    citeproc steps would treat `@asm-` as an unknown reference.
 --  * `chapter-bibliographies: true`: each chapter that cites gets its own reference
 --    list (allowed by §1.4, common in integrated-article theses).
 --  * `copyright-year` (from `date`) and `supervisor-label` metadata for the title page.
@@ -35,11 +39,73 @@ local function is_appendix_marker(b, meta)
   return pandoc.utils.stringify(b) == title
 end
 
+local function to_latex(inlines)
+  local tex = pandoc.write(pandoc.Pandoc({ pandoc.Plain(inlines) }), "latex")
+  return (tex:gsub("%s+$", ""))
+end
+
+-- Assumptions ------------------------------------------------------------------
+
+local function is_assumption_id(id)
+  return id ~= nil and id:match("^asm%-") ~= nil
+end
+
+-- `::: {#asm-x}` with an optional first heading as the title.
+local function assumption_blocks(div)
+  local content = pandoc.Blocks(div.content)
+  local title = ""
+  if #content > 0 and content[1].t == "Header" then
+    title = "[" .. to_latex(content:remove(1).content) .. "]"
+  end
+  local out = pandoc.Blocks({
+    pandoc.RawBlock("latex", "\\begin{assumption}" .. title .. "\\label{" .. div.identifier .. "}")
+  })
+  out:extend(content)
+  out:insert(pandoc.RawBlock("latex", "\\end{assumption}"))
+  return out
+end
+
+-- `@asm-x` -> Assumption~\ref{asm-x}; `-@asm-x` -> the number only;
+-- `[@asm-a; @asm-b]` -> Assumptions~\ref{asm-a} and~\ref{asm-b}.
+local function assumption_ref(cite)
+  local refs = pandoc.List()
+  for _, c in ipairs(cite.citations) do
+    if not is_assumption_id(c.id) then return nil end
+    refs:insert("\\ref{" .. c.id .. "}")
+  end
+  local list
+  if #refs == 1 then
+    list = refs[1]
+  else
+    list = table.concat(refs, ", ", 1, #refs - 1) .. " and~" .. refs[#refs]
+  end
+  if cite.citations[1].mode == "SuppressAuthor" then
+    return pandoc.RawInline("latex", list)
+  end
+  local name = #refs == 1 and "Assumption" or "Assumptions"
+  return pandoc.RawInline("latex", name .. "~" .. list)
+end
+
+-- Returns the document with assumptions converted, and whether it had any.
+local function convert_assumptions(doc)
+  local found = false
+  doc = doc:walk({
+    Div = function(div)
+      if is_assumption_id(div.identifier) then
+        found = true
+        return assumption_blocks(div)
+      end
+    end,
+    Cite = assumption_ref,
+  })
+  return doc, found
+end
+
 -- Quarto cross-reference prefixes: `@fig-x` etc. are Cite elements in the AST too.
 local CROSSREF_PREFIXES = {
   sec = true, fig = true, tbl = true, eq = true, lst = true, thm = true, lem = true,
   cor = true, prp = true, cnj = true, def = true, exm = true, exr = true, sol = true,
-  rem = true, alg = true, apx = true,
+  rem = true, alg = true, apx = true, asm = true,
 }
 
 local function is_crossref(cite)
@@ -103,11 +169,6 @@ end
 
 local function has_id_or_class(h, ids, class)
   return ids[h.identifier] or h.classes:includes(class)
-end
-
-local function to_latex(inlines)
-  local tex = pandoc.write(pandoc.Pandoc({ pandoc.Plain(inlines) }), "latex")
-  return (tex:gsub("%s+$", ""))
 end
 
 local function count_words(blocks)
@@ -187,7 +248,10 @@ local function western_pandoc(doc)
   if not quarto.doc.is_format("latex") then
     return nil
   end
+  local has_assumptions
+  doc, has_assumptions = convert_assumptions(doc)
   local meta = doc.meta
+  meta["has-assumptions"] = has_assumptions
   set_copyright_year(meta)
   set_supervisor_label(meta)
 

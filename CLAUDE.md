@@ -57,6 +57,11 @@ Key rules the format must enforce:
   copy is never used and Quarto's TinyTeX auto-install finds `stix2-otf` (verified on a
   TinyTeX without it). Don't switch to a font whose file names don't match its family
   name (e.g. TeX Gyre Termes → texgyretermes-*.otf): Quarto's font search can't find it.
+- Assumptions (`#asm-`): Quarto can't register new theorem types (its `theorem_types`
+  table is internal; custom crossrefs are floats only), so `westernthesis.lua` converts
+  `::: {#asm-x}` divs to an amsthm `assumption` env (definition style, numbered within
+  chapter) and `@asm-x` cites to `Assumption~\ref{asm-x}` *before* Quarto's crossref /
+  citeproc steps. `asm` is in CROSSREF_PREFIXES so chapter bibliographies skip it.
 - Tables: preamble patches `\LT@start` so short longtables (< half a page) move to the next
   page instead of splitting, and the bottom rule doubles as the page-break foot (Pandoc
   only sets `\endlastfoot`, which otherwise gets pushed alone onto a new page). Inside

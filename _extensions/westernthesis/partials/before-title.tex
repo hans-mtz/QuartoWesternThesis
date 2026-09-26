@@ -86,6 +86,14 @@
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
 \setlength{\cftbeforechapskip}{6pt}
 
+% Assumptions (`::: {#asm-name}`, converted by westernthesis.lua): numbered by
+% chapter like Quarto's theorems, upright text like definitions.
+$if(has-assumptions)$
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{assumption}{Assumption}[chapter]
+$endif$
+
 % List of Plates (SGPS Word template), for the custom `plt` float.
 $if(has-plates)$
 \newcommand{\westernlistofplates}{%
