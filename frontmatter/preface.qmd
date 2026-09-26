@@ -1,0 +1,6 @@
+# Preface {.unnumbered}
+
+<!-- Optional (SGPS §1.4). The last preliminary page, before Chapter 1. To use it,
+     uncomment this file in _quarto.yml. -->
+
+A preface can describe how the thesis came about, its scope, or how to read it.

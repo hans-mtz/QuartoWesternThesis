@@ -1,0 +1,8 @@
+# Epigraph {.unnumbered}
+
+<!-- Optional (SGPS §1.4). A short quotation that sets the tone of the thesis.
+     To use it, uncomment this file in _quarto.yml. -->
+
+> A short quotation that sets the tone of your thesis.
+>
+> --- Author of the quotation

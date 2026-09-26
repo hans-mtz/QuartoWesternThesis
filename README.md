@@ -65,7 +65,8 @@ and set `format: westernthesis-pdf` in `_quarto.yml`.
    `backmatter/cv.qmd`.
 
 Remove the files you don't need from `_quarto.yml`, for example the Co-Authorship
-Statement or the List of Abbreviations.
+Statement or the List of Abbreviations. The optional Epigraph, Dedication and Preface
+pages are ready in `frontmatter/`: uncomment them in `_quarto.yml` to use them.
 
 ## What the template does for you
 

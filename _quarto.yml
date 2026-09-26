@@ -23,10 +23,13 @@ book:
     - index.qmd                              # Abstract and keywords
     - frontmatter/lay-summary.qmd            # required, max 350 words
     - frontmatter/co-authorship.qmd          # remove if not applicable
+    # - frontmatter/epigraph.qmd             # optional
+    # - frontmatter/dedication.qmd           # optional
     - frontmatter/acknowledgements.qmd       # optional
     - frontmatter/genai.qmd                  # required: use / non-use of GenAI
     - frontmatter/lists.qmd                  # TOC + lists, do not remove
     - frontmatter/abbreviations.qmd          # remove if not applicable
+    # - frontmatter/preface.qmd              # optional, last preliminary page
     - chapters/01-introduction.qmd           # ← page 1 starts here
     - chapters/02-long-memory.qmd
     - chapters/03-conclusion.qmd

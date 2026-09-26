@@ -1,0 +1,5 @@
+# Dedication {.unnumbered}
+
+<!-- Optional (SGPS §1.4). To use it, uncomment this file in _quarto.yml. -->
+
+To my family.
