@@ -14,9 +14,18 @@ contributes:
       pdf-engine: lualatex
       papersize: letter
       fontsize: 12pt
-      # Times throughout (text, headings, math), like the 2010 Western LaTeX template.
-      mainfont: TeX Gyre Termes
-      mathfont: TeX Gyre Termes Math
+      # STIX Two (a modern Times design) throughout: text, headings and math.
+      # Loaded by file name from the TeX package `stix2-otf`, not from system fonts, so
+      # every platform gets the same version, and TinyTeX users get the package
+      # installed automatically by Quarto on the first render.
+      mainfont: STIXTwoText
+      mainfontoptions:
+        - Extension=.otf
+        - UprightFont=*-Regular
+        - BoldFont=*-Bold
+        - ItalicFont=*-Italic
+        - BoldItalicFont=*-BoldItalic
+      mathfont: STIXTwoMath-Regular.otf
       # SGPS §6.4: left >= 1.5in, top/bottom/right >= 1in. As in the SGPS Word
       # template, the header sits in the top margin (~0.55in from the edge; §6.6 needs
       # >= 0.5in) and the text starts at 1in.

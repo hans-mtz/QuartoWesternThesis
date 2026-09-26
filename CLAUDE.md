@@ -50,9 +50,17 @@ Key rules the format must enforce:
 - Word template style: Times New Roman 12pt body, 1.5 spacing, no first-line indent, 12pt
   before each paragraph; headings bold 16/16/14pt (front-matter titles centred);
   captions bold "Table 1: …"; bibliography single-spaced; footnotes 10pt.
-- Fonts: **Times everywhere** (TeX Gyre Termes + Termes Math), headings included — the Word
-  template's Arial headings were dropped by the user's choice. No font option is offered
-  (neither the 2010 LaTeX template nor the Cnam one has one).
+- Fonts: **STIX Two everywhere** (Times design; text, headings, math) — the Word template's
+  Arial headings were dropped by the user's choice. No font option is offered (neither the
+  2010 LaTeX template nor the Cnam one has one). Loaded by *file name*
+  (`STIXTwoText` + `Extension=.otf`, `STIXTwoMath-Regular.otf`) so macOS's system STIX
+  copy is never used and Quarto's TinyTeX auto-install finds `stix2-otf` (verified on a
+  TinyTeX without it). Don't switch to a font whose file names don't match its family
+  name (e.g. TeX Gyre Termes → texgyretermes-*.otf): Quarto's font search can't find it.
+- Tables: preamble patches `\LT@start` so short longtables (< half a page) move to the next
+  page instead of splitting, and the bottom rule doubles as the page-break foot (Pandoc
+  only sets `\endlastfoot`, which otherwise gets pushed alone onto a new page). Inside
+  longtable use `\penalty-\@M`, not `\newpage`.
 - Page numbers: front matter = lowercase roman, centred at the bottom, ≥ 0.5 in from the
   edge. Body = arabic starting at 1 on the first page of Chapter 1 / Introduction, in the
   **upper right corner**, ≥ 0.5 in from each edge (including chapter opening pages).

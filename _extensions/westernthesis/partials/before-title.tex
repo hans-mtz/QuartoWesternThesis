@@ -51,6 +51,27 @@
 \makeatother
 \captionsetup{labelfont=bf,textfont=bf,labelsep=colon}
 
+% Tables (Pandoc longtables):
+%  * Short tables (under half a page) that don't fit in the space left on the page
+%    start on the next page instead of splitting.
+%  * Pandoc only defines a last-page foot (the bottom rule). Using it as the
+%    page-break foot too reserves room for it, so the rule is never pushed alone to
+%    the next page, and each page of a multi-page table ends with a rule.
+% At \LT@start the first chunk of rows (up to \LTchunksize = 20) is in box 0.
+\makeatletter
+\newcommand{\western@longtablestart}{%
+  \ifvoid\LT@foot\ifvoid\LT@lastfoot\else\setbox\LT@foot\copy\LT@lastfoot\fi\fi
+  \dimen@\ht\z@ \advance\dimen@\dp\z@
+  \advance\dimen@\ht\ifvoid\LT@firsthead\LT@head\else\LT@firsthead\fi
+  \advance\dimen@\ht\LT@lastfoot
+  \ifdim\dimen@<.5\textheight
+    \advance\dimen@\pagetotal \advance\dimen@\LTpre
+    \ifdim\dimen@>\pagegoal \penalty-\@M\fi  % (\newpage is redefined in longtable)
+  \fi}
+\AtBeginDocument{\@ifpackageloaded{longtable}{%
+  \pretocmd{\LT@start}{\western@longtablestart}{}{}}{}}
+\makeatother
+
 % Footnotes (Word "Footnote Text"): 10pt (>= 9pt, §6.2); setspace keeps them
 % single-spaced.
 \renewcommand{\footnotesize}{\fontsize{10}{12}\selectfont}

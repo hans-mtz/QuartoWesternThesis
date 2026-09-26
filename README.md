@@ -15,6 +15,11 @@ matter order, page numbering, margins, lists and spacing.
 - A LaTeX distribution with LuaLaTeX, for example [TeX Live](https://tug.org/texlive/) or
   TinyTeX (`quarto install tinytex`)
 
+With TinyTeX, the first render downloads the LaTeX packages it needs, including the
+STIX Two fonts (package `stix2-otf`), so it needs an internet connection and takes a
+little longer. If you ever see `The font "STIXTwoText-Regular" cannot be found`, install
+the font yourself with `tlmgr install stix2-otf`.
+
 ## Get started
 
 Create a new thesis folder from the template:
@@ -77,7 +82,7 @@ pages are ready in `frontmatter/`: uncomment them in `_quarto.yml` to use them.
 | Preliminary pages in the TOC | Every front-matter page and list gets a Table of Contents entry. |
 | Page numbers | Roman numerals centred at the bottom in the front matter. Arabic numerals in the upper right from page 1 of Chapter 1, including chapter opening pages. |
 | Margins | 1.5 in left and 1 in top, right and bottom on every page. |
-| Text | 12 pt Times (TeX Gyre Termes) throughout, including headings and math. 1.5 line spacing. Footnotes are 10 pt. The bibliography is single-spaced. |
+| Text | 12 pt STIX Two (a modern Times design) throughout, including headings and math. 1.5 line spacing. Footnotes are 10 pt. The bibliography is single-spaced. |
 | Word limits | Warns during rendering if the Abstract is over 150 (master's) or 350 (doctoral) words, or the Lay Summary is over 350. |
 | Lists | The List of Plates and List of Appendices appear only if the thesis has plates or appendices. |
 | Curriculum Vitae | Last page, not lettered as an appendix. |
