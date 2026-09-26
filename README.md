@@ -157,3 +157,8 @@ Wide figures and tables are the usual cause of margin problems.
 The example content is adapted from the Western LaTeX thesis template by Justin Veenstra
 (2010). The extension structure follows
 [quarto-cnam-thesis](https://github.com/zinc75/quarto-cnam-thesis).
+
+## License
+
+[MIT](LICENSE) © 2026 Hans Martinez. The license covers the template and extension
+code. Your thesis content is yours: you don't need to credit this template in it.
