@@ -70,6 +70,13 @@ Key rules the format must enforce:
 - The filter runs at the default (pre-quarto) stage: after Quarto's filters, chapter
   headings are wrapped in Quarto nodes. Anything that needs post-shortcode state goes
   through metadata read by the template (e.g. `has-appendices`).
+- List of Plates is kept (Word template has it; the policy doesn't) via a custom `plt`
+  crossref float (aux ext `lopl`, since `lop` is Quarto's listings). Quarto turns
+  crossref divs into `FloatRefTarget` custom nodes before user filters: match them with
+  a `FloatRefTarget` filter function; `doc:walk` does not visit them.
+- Test the template as a student gets it: commit, `git clone` to the scratchpad, then
+  `quarto use template <clone> --no-prompt` in an empty dir (a local-path install also
+  copies git-ignored files).
 
 ## Conventions
 
