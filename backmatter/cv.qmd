@@ -5,24 +5,25 @@
      relevant publications. No address, email, phone number or signature. -->
 
 +-----------------------------+----------------------------------------------------+
-| **Name:**                   | Jane Doe                                           |
+| **Name:**                   | Samwell Tarly                                      |
 +-----------------------------+----------------------------------------------------+
-| **Post-secondary            | Example University\                                |
-| Education and Degrees:**    | City, Province, Canada\                            |
-|                             | 2016--2020 B.Sc.                                   |
+| **Post-secondary            | The Citadel\                                       |
+| Education and Degrees:**    | Oldtown, The Reach\                                |
+|                             | B.A. Economics                                     |
 |                             |                                                    |
 |                             | The University of Western Ontario\                 |
 |                             | London, Ontario, Canada\                           |
-|                             | 2020--2026 Ph.D.                                   |
+|                             | Ph.D. Economics                                    |
 +-----------------------------+----------------------------------------------------+
-| **Honours and Awards:**     | Example Graduate Scholarship\                      |
-|                             | 2021--2024                                         |
+| **Honours and Awards:**     | Maester's Chain of Silver (Economics)\             |
+|                             | 2024                                               |
 +-----------------------------+----------------------------------------------------+
 | **Related Work              | Teaching Assistant\                                |
-| Experience:**               | The University of Western Ontario\                 |
-|                             | 2020--2025                                         |
+| Experience:**               | Department of Economics\                           |
+|                             | The University of Western Ontario                  |
 +-----------------------------+----------------------------------------------------+
 
 **Publications:**
 
-Doe, J. (2026). An example article. *Journal of Examples*, 1(1), 1--10.
+Tarly, S. and Targaryen, A. (2025). Winter is coming: Wages and enlistment at the Wall.
+*Journal of Westerosi Economics*.

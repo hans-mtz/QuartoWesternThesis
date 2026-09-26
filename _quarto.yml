@@ -11,11 +11,11 @@ project:
 # TO FILL IN — thesis information
 # -----------------------------------------------------------------------------
 book:
-  title: "Computational Statistics: Time Series and Data Mining"
+  title: "Essays in Applied Microeconomics: Policy Evaluation Beyond the Wall"
   author:
     - name:
-        given: Jane
-        family: Doe
+        given: Samwell
+        family: Tarly
   date: 2026-09-01
   date-format: "MMMM YYYY"            # title page shows "September 2026"
   output-file: thesis
@@ -31,7 +31,7 @@ book:
     - frontmatter/abbreviations.qmd          # remove if not applicable
     # - frontmatter/preface.qmd              # optional, last preliminary page
     - chapters/01-introduction.qmd           # ← page 1 starts here
-    - chapters/02-long-memory.qmd
+    - chapters/02-did.qmd
     - chapters/03-conclusion.qmd
     - backmatter/references.qmd
   appendices:
@@ -41,14 +41,14 @@ book:
 bibliography: references.bib
 
 # Title page (SGPS Word template) and abstract
-supervisor: "Dr. A. Supervisor"            # a list for several supervisors
-program: "Statistics and Actuarial Science"
+supervisor: "Dr. Aemon Targaryen"            # a list for several supervisors
+program: "Economics"
 degree: "Doctor of Philosophy"
 degree-level: doctoral                     # doctoral | masters (abstract limit 350 | 150 words)
 keywords:
-  - time series analysis
-  - long memory
-  - data mining
+  - difference-in-differences
+  - minimum wage
+  - policy evaluation
 
 # -----------------------------------------------------------------------------
 # Format options

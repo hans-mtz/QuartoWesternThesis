@@ -2,6 +2,9 @@
 
 <!-- Required. Max 350 words, written for readers without prior knowledge of the field. -->
 
-Many measurements taken over time, such as river levels or stock prices, are
-influenced by what happened long ago. This thesis looks at ways to describe that
-long-lasting influence and to use it for better forecasts.
+Did raising the pay of new recruits at the Wall scare away enlistment, as the Lords of
+the Seven Kingdoms feared? To find out, this thesis compares a castle that raised pay
+with a similar castle that did not, before and after the change. If both castles were
+on the same path before, the difference in how they changed afterwards shows the effect
+of the policy. Economists have used this idea for more than a century, and it has
+become a standard tool for evaluating policies.

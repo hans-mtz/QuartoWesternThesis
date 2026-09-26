@@ -1,13 +1,17 @@
-# Proofs of Theorems {#sec-app-proofs}
+# Proofs {#sec-app-proofs}
 
 <!-- Each numbered file in `book.appendices` becomes a lettered appendix and appears
      in the List of Appendices. -->
 
 ::: {.proof}
-## Proof of @thm-euler
+## Proof of @prp-did
 
-By Euler's formula,
+Write $y_t(1)$ and $y_t(0)$ for potential outcomes with and without treatment. The
+treated group is observed treated after the policy, so
 $$
-e^{i\pi} = \cos(\pi) + i\sin(\pi) = -1.
+E[y_1 - y_0 \mid T] = E[y_1(1) - y_1(0) \mid T] + E[y_1(0) - y_0(0) \mid T].
 $$
+The first term is the ATT. By parallel trends, the second term equals
+$E[y_1(0) - y_0(0) \mid C] = E[y_1 - y_0 \mid C]$. Subtracting the control group's
+change leaves the ATT.
 :::

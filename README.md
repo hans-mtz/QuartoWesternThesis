@@ -53,15 +53,15 @@ and set `format: westernthesis-pdf` in `_quarto.yml`.
      title: "Your Thesis Title"
      author:
        - name:
-           given: Jane
-           family: Doe        # underlined on the title page
+           given: Samwell
+           family: Tarly      # underlined on the title page
      date: 2026-09-01         # shown as "September 2026"
 
-   supervisor: "Dr. A. Supervisor"   # or a list for several supervisors
-   program: "Statistics and Actuarial Science"
+   supervisor: "Dr. Aemon Targaryen" # or a list for several supervisors
+   program: "Economics"
    degree: "Doctor of Philosophy"
    degree-level: doctoral             # doctoral | masters
-   keywords: [time series, long memory]
+   keywords: [difference-in-differences, minimum wage]
    ```
 
 2. Write the front matter in `index.qmd` (Abstract) and `frontmatter/`.
@@ -90,7 +90,7 @@ pages are ready in `frontmatter/`: uncomment them in `_quarto.yml` to use them.
 ## Writing features
 
 **Figures, tables, equations and theorems** use standard Quarto cross-references
-(`@fig-`, `@tbl-`, `@eq-`, `@thm-`, `@sec-`). See `chapters/02-long-memory.qmd`.
+(`@fig-`, `@tbl-`, `@eq-`, `@thm-`, `@sec-`). See `chapters/02-did.qmd`.
 
 **Plates** (photographs and similar) have their own numbering and list:
 
@@ -106,10 +106,11 @@ Aerial photograph of the study site.
 accepted or submitted. Add an attribute with the citation to the chapter heading:
 
 ```markdown
-# Long Memory in River Flows {#sec-flows published="@doe2025"}
+# Wages and Enlistment at the Wall {#sec-did published="@tarly2025"}
 ```
 
-This prints "A version of this chapter has been published: Doe (2025)." Use
+This prints "A version of this chapter has been published: Tarly and Targaryen
+(2025)." Use
 `accepted=` or `submitted=` for the other statuses.
 
 **References at the end of each chapter** (common in integrated-article theses):

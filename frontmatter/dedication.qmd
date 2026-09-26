@@ -2,4 +2,4 @@
 
 <!-- Optional (SGPS §1.4). To use it, uncomment this file in _quarto.yml. -->
 
-To my family.
+To the memory of Jon Snow, Lord Commander of the Night's Watch.

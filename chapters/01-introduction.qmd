@@ -1,8 +1,11 @@
 # Introduction {#sec-intro}
 
-This chapter introduces the objectives of the work. @sec-long-memory studies
-long-memory time series, and @sec-conclusion concludes.
+Difference-in-differences is one of the oldest and most widely used tools of applied
+economics [@angrist2009]. Its best-known application is @card1994's study of the
+minimum wage in New Jersey and Pennsylvania; @card1990 used the same logic to study the
+Mariel boatlift, and it reached a wide audience through @levitt2005. @sec-did applies
+it to the Night's Watch, and @sec-conclusion concludes.
 
 ## Objectives
 
-State the objectives of the thesis here.
+State the research questions and contributions of the thesis here.

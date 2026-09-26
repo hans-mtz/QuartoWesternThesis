@@ -1,0 +1,72 @@
+# Wages and Enlistment at the Wall {#sec-did submitted="@tarly2025"}
+
+<!-- The `submitted="@key"` attribute adds the footnote required by SGPS §3 for
+     chapters that are published, accepted or submitted. Use `published="@key"` or
+     `accepted="@key"` as appropriate, or remove it for unpublished chapters. -->
+
+This chapter shows how to write figures, tables, equations, theorems and citations.
+Everything is numbered by chapter and appears in the lists at the front of the thesis.
+
+## Figures
+
+In the second year of the study, the Night's Watch raised the wage of new recruits at
+Castle Black but not at Eastwatch-by-the-Sea. @fig-did shows monthly enlistment at both
+castles.
+
+![Enlistment at Castle Black and Eastwatch (simulated data). The dashed line is the
+counterfactual for Castle Black under parallel trends.](../images/did.png){#fig-did
+width=85%}
+
+## Tables
+
+@tbl-did compares mean enlistment before and after the wage increase. Table captions go
+above the table.
+
+| | Before | After | Difference |
+|:--------------------------|------:|------:|-----------:|
+| Castle Black (treated)    | 19.6  | 20.6  | 1.0        |
+| Eastwatch (control)       | 22.6  | 20.9  | −1.7       |
+| Difference-in-differences |       |       | 2.7 (0.4)  |
+
+: Mean monthly enlistment before and after the wage increase (simulated data). Standard
+error in parentheses. {#tbl-did}
+
+## Equations
+
+The difference-in-differences estimator compares the change at the treated castle with
+the change at the control castle:
+
+$$
+\hat\delta = \left(\bar y_{T,1} - \bar y_{T,0}\right) - \left(\bar y_{C,1} - \bar y_{C,0}\right).
+$$ {#eq-did}
+
+Equivalently, $\hat\delta$ is the interaction coefficient in the regression
+
+$$
+y_{it} = \alpha + \beta\,\text{Treat}_i + \gamma\,\text{Post}_t
+  + \delta\,(\text{Treat}_i \times \text{Post}_t) + \varepsilon_{it}.
+$$ {#eq-twfe}
+
+Unnumbered display math has no label. The key assumption is parallel trends:
+
+$$
+E\left[y_{1}(0) - y_{0}(0) \mid T\right] = E\left[y_{1}(0) - y_{0}(0) \mid C\right].
+$$
+
+## Theorems and Proofs
+
+::: {#prp-did}
+## Identification
+
+Under parallel trends, the difference-in-differences estimand equals the average
+treatment effect on the treated.
+:::
+
+@prp-did is proved in @sec-app-proofs. Theorems (`#thm-`), lemmas (`#lem-`),
+corollaries (`#cor-`), definitions (`#def-`), examples (`#exm-`) and remarks work the
+same way.
+
+## Citations
+
+The design follows @card1994; see @angrist2009 [ch. 5] for a textbook treatment, and
+@lannister2024 on the finances of the Iron Throne.

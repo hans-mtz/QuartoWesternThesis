@@ -4,6 +4,6 @@
      contributions of each author, the percentage of the work done by the student,
      and the publication status. Delete this file from _quarto.yml otherwise. -->
 
-Chapter 2 is based on a manuscript co-authored with A. Supervisor. I designed the
-study, carried out all analyses and wrote the manuscript (about 85% of the work).
-Status: submitted to *Journal of Time Series Analysis* (2026).
+Chapter 2 is based on a manuscript co-authored with Aemon Targaryen. I collected the
+ravens' records, carried out all estimations and wrote the manuscript (about 85% of the
+work). Status: submitted to the *Journal of Westerosi Economics* (2026).

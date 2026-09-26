@@ -95,7 +95,12 @@ Key rules the format must enforce:
 - Structural logic (front/main matter switch, lists placement, appendix list, chapter
   publication footnotes) lives in the Lua filter, not in user content.
 - Every user-facing option is declared in `_schema.yml` with a description.
-- Keep the example content generic (no real people's names).
+- Example content: an economics (difference-in-differences) thesis. People in it (author,
+  supervisor, co-authors, CV, fictional references) use Game of Thrones names; real
+  classic citations (Card & Krueger 1994, Card 1990, Angrist & Pischke 2009, Levitt &
+  Dubner 2005) are allowed with exact bibliographic data. Data in tables/figures is
+  simulated and labelled as such — never quote a real paper's numbers from memory.
+  The figure is a static PNG (`images/did.png`, drawn once in R); no plates in the example.
 
 ## Commands
 

@@ -1,7 +1,11 @@
 # Abstract {.unnumbered}
 
-<!-- Max 150 words (master's) or 350 words (doctoral). Same line spacing as the body. -->
+<!-- Max 150 words (master's) or 350 words (doctoral). Same line spacing as the body.
+     Keywords come from `keywords` in _quarto.yml and are added after the abstract. -->
 
-This thesis studies long-memory time series and their estimation. It states the
-research problem, the methods used, the main findings and their significance.
-
+This thesis evaluates public policies with difference-in-differences methods. The
+first essay studies the effect of a wage increase for recruits of the Night's Watch on
+enlistment at Castle Black, using Eastwatch-by-the-Sea as a comparison garrison.
+Following the design of Card and Krueger's minimum wage study, I find no decline in
+enlistment after the wage increase. The thesis discusses the parallel trends assumption
+and its implications for policy evaluation in the Seven Kingdoms.

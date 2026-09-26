@@ -1,6 +1,7 @@
 # List of Abbreviations, Symbols, and Nomenclature {.unnumbered}
 
-| Abbreviation | Meaning                                  |
-|:-------------|:-----------------------------------------|
-| ARFIMA       | Autoregressive fractionally integrated moving average |
-| ACF          | Autocorrelation function                 |
+| Abbreviation | Meaning                                        |
+|:-------------|:-----------------------------------------------|
+| ATT          | Average treatment effect on the treated        |
+| DiD          | Difference-in-differences                      |
+| OLS          | Ordinary least squares                         |

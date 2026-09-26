@@ -39,7 +39,7 @@ contributes:
         - footskip=0.4in
       number-sections: true
       # Plates (photographs etc.) as their own numbered float with a List of Plates,
-      # as in the SGPS Word template: ![...](img.jpg){#plt-name}
+      # as in the SGPS Word template: a `::: {#plt-name}` div with an image and caption.
       crossref:
         custom:
           - kind: float
