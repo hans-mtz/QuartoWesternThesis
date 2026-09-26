@@ -48,9 +48,11 @@ Key rules the format must enforce:
 - Margins: left ≥ 1.5 in; top, bottom, right ≥ 1 in, on every page (so one-sided layout,
   no mirrored margins). Figures and tables must fit inside them too.
 - Word template style: Times New Roman 12pt body, 1.5 spacing, no first-line indent, 12pt
-  before each paragraph; headings Arial bold (16/16/14pt; front-matter titles centred);
-  captions bold "Table 1: …"; bibliography single-spaced; footnotes 10pt. The template
-  uses TeX Gyre Termes / Heros as the Times / Arial equivalents.
+  before each paragraph; headings bold 16/16/14pt (front-matter titles centred);
+  captions bold "Table 1: …"; bibliography single-spaced; footnotes 10pt.
+- Fonts: **Times everywhere** (TeX Gyre Termes + Termes Math), headings included — the Word
+  template's Arial headings were dropped by the user's choice. No font option is offered
+  (neither the 2010 LaTeX template nor the Cnam one has one).
 - Page numbers: front matter = lowercase roman, centred at the bottom, ≥ 0.5 in from the
   edge. Body = arabic starting at 1 on the first page of Chapter 1 / Introduction, in the
   **upper right corner**, ≥ 0.5 in from each edge (including chapter opening pages).

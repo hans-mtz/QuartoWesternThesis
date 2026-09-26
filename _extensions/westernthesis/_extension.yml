@@ -14,9 +14,8 @@ contributes:
       pdf-engine: lualatex
       papersize: letter
       fontsize: 12pt
-      # SGPS Word template: Times New Roman body, Arial headings.
+      # Times throughout (text, headings, math), like the 2010 Western LaTeX template.
       mainfont: TeX Gyre Termes
-      sansfont: TeX Gyre Heros
       mathfont: TeX Gyre Termes Math
       # SGPS §6.4: left >= 1.5in, top/bottom/right >= 1in. As in the SGPS Word
       # template, the header sits in the top margin (~0.55in from the edge; §6.6 needs
